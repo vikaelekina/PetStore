@@ -1,0 +1,7 @@
+питомца без обязательного поля name; {"photoUrls":["https://example.com/photo1.jpg"]}
+питомца без обязательного поля photoUrls; {"name":"Bobik"}
+питомца с некорректным типом данных ID; {"id":"string","name":"Bobik","photoUrls":["https://example.com/photo1.jpg"],"status":"available"}
+питомца c некорректным типом данных photoUrls; {"id":5,"name":"Bobik","photoUrls":"https://example.com/photo1.jpg","status":"available"}
+питомца с некорректным значением status (значение не входит в допустимые: available, sold, pending); {"id":5,"name":"Bobik","photoUrls":["https://example.com/photo1.jpg"],"status":"invalid"}
+питомца с некорректным вложенным типом данных (некорректный id category); {"id":5,"category":{"id":"string","name":"dog"},"name":"Bobik","photoUrls":["https://example.com/photo1.jpg"],"status":"available"}
+питомца с пустым body; {}
